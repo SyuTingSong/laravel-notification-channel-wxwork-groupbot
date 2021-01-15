@@ -1,20 +1,23 @@
 {
-    "name": "laravel-notification-channels/:package_name",
-    "description": ":package_description",
-    "homepage": "https://github.com/laravel-notification-channels/:package_name",
+    "name": "laravel-notification-channels/wxwork-group-bot",
+    "description": "Notification channel for WxWork GroupBot",
+    "homepage": "https://github.com/laravel-notification-channels/wxwork-group-bot",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": ":author_website",
+            "name": "TingSong-Syu",
+            "email": "rek@rek.me",
+            "homepage": "https://xts.so",
             "role": "Developer"
         }
     ],
     "require": {
         "php": ">=7.2",
+        "guzzlehttp/guzzle": "^7.2",
         "illuminate/notifications": "~6.0 || ~7.0 || ~8.0",
-        "illuminate/support": "~6.0 || ~7.0 || ~8.0"
+        "illuminate/support": "~6.0 || ~7.0 || ~8.0",
+        "ext-gd": "*",
+        "ext-json": "*"
     },
     "require-dev": {
         "mockery/mockery": "^1.0",
@@ -22,12 +25,12 @@
     },
     "autoload": {
         "psr-4": {
-            "NotificationChannels\\:channel_namespace\\": "src"
+            "NotificationChannels\\WxWorkGroupBot\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "NotificationChannels\\:channel_namespace\\Test\\": "tests"
+            "NotificationChannels\\WxWorkGroupBot\\Test\\": "tests"
         }
     },
     "scripts": {
