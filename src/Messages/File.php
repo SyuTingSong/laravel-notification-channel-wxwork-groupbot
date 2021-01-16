@@ -11,12 +11,6 @@ class File extends WxWorkGroupBotMessage
 
     protected $attachment;
 
-    public function file(string $filename, string $mimeType = 'application/octet-stream'): File
-    {
-        $this->attachment = [$filename, $mimeType];
-        return $this;
-    }
-
     public function filename(string $filename): File
     {
         $this->attachment[0] = $filename;

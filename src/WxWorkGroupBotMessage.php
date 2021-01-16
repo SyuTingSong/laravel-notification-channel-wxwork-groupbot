@@ -45,13 +45,9 @@ class WxWorkGroupBotMessage implements JsonSerializable
      * @return Image
      * @throws CouldNotSendNotification
      */
-    public static function image($image = null): Image
+    public static function image($image): Image
     {
-        if ($image === null) {
-            return new Image();
-        }
-
-        return (new Image())->image($image);
+        return new Image($image);
     }
 
     public static function news(?Article $article = null): News

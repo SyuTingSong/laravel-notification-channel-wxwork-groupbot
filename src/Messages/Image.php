@@ -12,10 +12,9 @@ class Image extends WxWorkGroupBotMessage
     /**
      * @param mixed $image
      *
-     * @return $this
      * @throws CouldNotSendNotification
      */
-    public function image($image): Image
+    public function __construct($image)
     {
         if (is_resource($image)) {
             if (get_resource_type($image) === 'gd') {
@@ -41,6 +40,5 @@ class Image extends WxWorkGroupBotMessage
             'base64' => base64_encode($image),
             'md5'    => md5($image),
         ];
-        return $this;
     }
 }
