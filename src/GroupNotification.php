@@ -21,4 +21,9 @@ final class GroupNotification extends Notification
     {
         return $this->message;
     }
+
+    public function via()
+    {
+        return [WxWorkGroupBotChannel::class];
+    }
 }
